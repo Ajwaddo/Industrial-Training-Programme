@@ -43,8 +43,9 @@
 Python Documentation
 This documentation provides a more detailed reference for fundamental Python concepts, expanding on the topics you've outlined.
 
-Functions & Definitions
-`def`
+## Functions & Definitions
+
+### `def`
 The `def` keyword is used to define a function. A function is a named block of reusable code that performs a specific task. By using functions, you can make your code more organized, readable, and modular. Functions can accept zero or more inputs, known as arguments, and they can return an output.
 
 ```
@@ -69,7 +70,7 @@ say_hello("Bob")
 Output: Hello, Bob!
 ```
 
-`return`
+### `return`
 The `return` statement is used to exit a function and send a value back to the caller. A function can return any Python object, and if it doesn't have an explicit `return` statement, it implicitly returns None. You can also return multiple values, which Python handles by packaging them into a tuple.
 
 ```
@@ -90,7 +91,7 @@ print(result)
 Output: None
 ```
 
-`lambda`
+### `lambda`
 A `lambda` function is a small, anonymous function that can take any number of arguments but is restricted to a single expression. They are called anonymous because they don't have a name. `lambda` functions are typically used for short, one-time operations and are often passed as arguments to other functions like `map()`, `filter()`, or `sorted()`.
 
 ```
@@ -110,7 +111,7 @@ print(sorted_points)
 Output: [(3, 0), (0, 1), (1, 2)]
 ```
 
-`yield`
+### `yield`
 The `yield` keyword is used to create a generator function. Unlike `return`, which terminates a function, `yield` pauses its execution, saves its state, and returns a value to the caller. When the generator is iterated over again (e.g., with `next()`), the function resumes from where it left off. Generators are highly memory-efficient as they produce items one by one instead of creating a full list in memory, making them ideal for handling large datasets.
 
 ```
@@ -152,7 +153,7 @@ All fibonacci numbers up to 10:
 8
 ```
 
-`pass`
+### `pass`
 The `pass` statement is a null operation. It does absolutely nothing. It is used as a placeholder when a statement is syntactically required but you don't want any code to be executed. This is useful for defining empty functions, classes, or conditional blocks that will be filled in later.
 
 ```
@@ -172,8 +173,9 @@ else:
 print("This will not be printed")
 ```
 
-Control Flow
-`if`/`elif`/`else`
+## Control Flow
+
+### `if`/`elif`/`else`
 These keywords are used for conditional execution, allowing your program to make decisions based on specific conditions. The conditions are evaluated in order. The first block whose condition evaluates to True is executed, and the rest of the chain is skipped. The `else` block is a final fallback that runs only if all preceding `if` and `elif` conditions are False.
 
 ```
@@ -206,7 +208,7 @@ print("Neither will this.")
 Output: SyntaxError: invalid syntax
 ```
 
-`for`
+### `for`
 A `for` loop is used to iterate over a sequence of items. It executes a block of code once for each item in the sequence. It's a powerful tool for working with lists, tuples, dictionaries, strings, and other iterable objects. The `range()` function is often used to generate a sequence of numbers for a `for` loop.
 
 ```
@@ -228,7 +230,7 @@ Iteration number: 1
 Iteration number: 2
 ```
 
-`while`
+### `while`
 A `while` loop repeatedly executes a block of code as long as its condition remains True. It's essential to include a statement within the loop that will eventually make the condition False to avoid an infinite loop.
 
 ```
@@ -243,7 +245,7 @@ Count is 1
 Count is 2
 ```
 
-`break`
+### `break`
 The `break` statement is used to immediately exit the innermost `for` or `while` loop that contains it. The program then continues execution from the first statement after the loop.
 
 ```
@@ -262,7 +264,7 @@ Output:
 Breaking the loop at 5
 ```
 
-`continue`
+### `continue`
 The `continue` statement skips the rest of the code inside the current iteration of a loop and moves on to the next iteration. It's useful when you want to skip certain items in a sequence without exiting the loop entirely.
 
 ```
@@ -280,8 +282,9 @@ Skipping number 2
 4
 ```
 
-Error Handling
-`try`/`except`
+## Error Handling
+
+### `try`/`except`
 The `try` and `except` blocks are used for handling runtime errors (exceptions). Code that might raise an error is placed inside the `try` block. If an error occurs, the code inside the `except` block is executed instead of the program crashing. You can catch specific exceptions to handle different error types gracefully.
 
 ```
@@ -302,7 +305,7 @@ print(f"An unexpected error occurred: {e}")
 Output: Error: Cannot divide by zero!
 ```
 
-`finally`
+### `finally`
 The `finally` block is an optional addition to a `try...except` block. The code inside the `finally` block will always be executed, whether an exception occurred or not. This is particularly useful for cleanup actions, such as closing a file or a database connection, ensuring that resources are released properly.
 
 ```
@@ -323,7 +326,7 @@ Output:
 Closing the file.
 ```
 
-`raise`
+### `raise`
 The `raise` statement allows you to manually force a specific exception to occur. This is useful for indicating that a function has received invalid input or that some other condition has been violated, preventing the program from continuing with bad data.
 
 ```
@@ -344,7 +347,7 @@ print(f"An error occurred: {e}")
 Output: An error occurred: Age must be an integer.
 ```
 
-`assert`
+### `assert`
 The `assert` statement is a debugging tool used to check if a condition is true. If the condition is False, it raises an `AssertionError` with an optional error message. It's a quick way to ensure that assumptions about your code are met, and it's typically used to catch programmer errors rather than user errors.
 
 ```
@@ -364,8 +367,9 @@ print(f"Assertion Error: {e}")
 Output: Assertion Error: Input must be a non-empty list.
 ```
 
-Object-Oriented Programming (OOP)
-`class`
+## Object-Oriented Programming (OOP)
+
+### `class`
 A class is a blueprint for creating objects. It encapsulates data (attributes) and functionality (methods) into a single unit. Attributes are variables that store information about an object, and methods are functions that define its behavior.
 
 ```
@@ -389,7 +393,7 @@ print(f"My dog's name is {my_dog.name} and it is a {my_dog.species}.")
 Output: My dog's name is Fido and it is a Canis familiaris.
 ```
 
-`self`
+### `self`
 The `self` parameter is a convention in Python to refer to the instance of the class that a method belongs to. It is the first parameter of any instance method, and it automatically gets passed the instance object when the method is called. Using `self`, you can access and modify the attributes and methods of the specific object.
 
 ```
@@ -412,7 +416,7 @@ print(other_car.get_color())
 Output: Blue
 ```
 
-`init`
+### `init`
 The `init` method, often called the constructor, is a special method that is automatically called when a new object is created from a class. Its primary purpose is to initialize the new object's attributes. You'll use it to set up the initial state of your object.
 
 ```
@@ -429,7 +433,7 @@ print(f"Book: {book1.title}, Author: {book1.author}, Pages: {book1.pages}")
 Output: Book: The Hitchhiker's Guide to the Galaxy, Author: Douglas Adams, Pages: 208
 ```
 
-`super()`
+### `super()`
 The `super()` function allows a child class to access methods and attributes of its parent class. This is most commonly used in inheritance, especially in the `init` method of a child class, to call the parent's constructor and initialize inherited attributes. This helps to avoid code duplication and maintain a clear hierarchy.
 
 ```
@@ -461,7 +465,7 @@ Fido says Woof
 This is a Golden Retriever.
 ```
 
-`del`
+### `del`
 The `del` keyword is a statement used to delete an object's reference. In the context of classes, you can use it to delete an object's attribute or the object itself. When all references to an object are deleted, Python's garbage collector will eventually remove the object from memory.
 
 ```
@@ -484,8 +488,9 @@ However, p2 still exists and refers to the object
 print(p2)
 ```
 
-Import & Modules
-`import`
+## Import & Modules
+
+### `import`
 The `import` statement is used to import a module, which is a file containing Python code. This makes the module's functions, classes, and variables available in your current file. To use an imported item, you must prefix it with the module name.
 
 ```
@@ -504,7 +509,7 @@ print(random.randint(1, 10))
 Output: (a random integer between 1 and 10)
 ```
 
-`from ... import ...`
+### `from ... import ...`
 This statement is used to import specific items (functions, classes, or variables) from a module directly into your current namespace. This allows you to use the imported items without needing to prefix them with the module name, which can make your code cleaner. Be cautious, as this can lead to name conflicts if you import multiple items with the same name.
 
 ```
@@ -523,7 +528,7 @@ print(randint(1, 10))
 Output: (a random integer between 1 and 10)
 ```
 
-`as`
+### `as`
 The `as` keyword is used to create an alias or a shorter name for an imported module or item. This is a common practice for modules with long names (e.g., `import pandas as pd`) or for resolving name conflicts when importing from different modules.
 
 ```
@@ -540,8 +545,9 @@ print(data)
 print(get_random_int(1, 5))
 ```
 
-Variable Scope & References
-`global`
+## Variable Scope & References
+
+### `global`
 Variables defined outside of a function are considered to be in the global scope. The `global` keyword is used inside a function to explicitly declare that a variable is a global one, and that you intend to modify it. Without the `global` keyword, any assignment to a variable inside a function will create a new, local variable with the same name.
 
 ```
@@ -561,7 +567,7 @@ print(f"Outside function, x is: {x}")
 Output: Outside function, x is: 15
 ```
 
-`nonlocal`
+### `nonlocal`
 The `nonlocal` keyword is similar to `global` but is used in nested functions. It declares that a variable is not local to the inner function, but rather belongs to an enclosing function. It allows you to modify a variable in an outer, non-global scope.
 
 ```
@@ -586,7 +592,7 @@ print(f"Final count is: {final_count}")
 Output: Final count is: 2
 ```
 
-`is`
+### `is`
 The `is` operator checks for object identity. It returns True if two variables refer to the exact same object in memory, and False otherwise. This is different from the `==` operator, which checks for value equality. Use `is` when you need to confirm if two variables are pointing to the same instance of an object.
 
 ```
@@ -605,7 +611,7 @@ print(f"a is c: {a is c}")
 Output: a is c: False (They are different objects)
 ```
 
-`in`
+### `in`
 The `in` operator checks for membership. It returns True if an item is found within a sequence (like a list, tuple, set, or string) and False otherwise. It's a simple and readable way to test for the existence of an element.
 
 ```
@@ -622,8 +628,9 @@ print(f"'World' in text: {'World' in text}")
 Output: 'World' in text: True
 ```
 
-Context & Special Uses
-`with`
+## Context & Special Uses
+
+### `with`
 The `with` statement is a powerful construct for simplifying resource management. It guarantees that a resource, such as an open file or a network connection, is properly acquired at the beginning of a block and automatically released at the end, even if an error occurs.
 
 ```
@@ -636,7 +643,7 @@ file.write("This is another line.\n")
 The file is automatically closed here, even if a crash occurred inside the block.
 ```
 
-`None`
+### `None`
 `None` is a special constant that represents the absence of a value. It is the sole instance of the `NoneType` data type. It is not the same as `0`, an empty string, or False. It is often used to initialize variables or to indicate that a function does not return a meaningful value.
 
 ```
@@ -647,7 +654,7 @@ print("The variable has no value assigned.")
 Output: The variable has no value assigned.
 ```
 
-`True`/`False`
+### `True`/`False`
 True and False are the two boolean values that represent the truth values of expressions. They are used in conditional statements and logical operations to control the flow of a program.
 
 ```
@@ -660,7 +667,7 @@ print("It's a perfect day!")
 Output: It's a perfect day!
 ```
 
-`and`/`or`/`not`
+### `and`/`or`/`not`
 These are the three logical operators that are used to combine and manipulate boolean expressions.
 
 and: Returns True if both of its operands are True.
