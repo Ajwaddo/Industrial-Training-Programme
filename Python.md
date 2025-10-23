@@ -51,24 +51,24 @@ The `def` keyword is used to define a function. A function is a named block of r
 
 ```
 
-A simple function with one parameter
+# A simple function with one parameter
 def greet(name):
-print(f"Hello, {name}!")
+  print(f"Hello, {name}!")
 
-Calling the function with an argument
+# Calling the function with an argument
 greet("Alice")
 
-Output: Hello, Alice!
-A function with a default parameter
+# Output: Hello, Alice!
+# A function with a default parameter
 def say_hello(name="World"):
-print(f"Hello, {name}!")
+  print(f"Hello, {name}!")
 
 say_hello()
 
-Output: Hello, World!
+# Output: Hello, World!
 say_hello("Bob")
 
-Output: Hello, Bob!
+# Output: Hello, Bob!
 ```
 
 ### `return`
@@ -76,20 +76,20 @@ The `return` statement is used to exit a function and send a value back to the c
 
 ```
 def add_and_subtract(a, b):
-# This function returns a tuple of two values
-return a + b, a - b
+  # This function returns a tuple of two values
+  return a + b, a - b
 
 sum_result, diff_result = add_and_subtract(10, 5)
 print(f"Sum: {sum_result}, Difference: {diff_result}")
 
-Output: Sum: 15, Difference: 5
+# Output: Sum: 15, Difference: 5
 def do_nothing():
-# This function implicitly returns None
-pass
-result = do_nothing()
-print(result)
+  # This function implicitly returns None
+  pass
+  result = do_nothing()
+  print(result)
 
-Output: None
+# Output: None
 ```
 
 ### `lambda`
@@ -97,19 +97,19 @@ A `lambda` function is a small, anonymous function that can take any number of a
 
 ```
 
-A lambda function to add two numbers
+# A lambda function to add two numbers
 add = lambda x, y: x + y
 print(add(2, 3))
 
-Output: 5
-Using a lambda function with the sorted() function
+# Output: 5
+# Using a lambda function with the sorted() function
 points = [(1, 2), (0, 1), (3, 0)]
 
-Sort the list of tuples based on the second element
+# Sort the list of tuples based on the second element
 sorted_points = sorted(points, key=lambda p: p[1])
 print(sorted_points)
 
-Output: [(3, 0), (0, 1), (1, 2)]
+# Output: [(3, 0), (0, 1), (1, 2)]
 ```
 
 ### `yield`
@@ -117,41 +117,41 @@ The `yield` keyword is used to create a generator function. Unlike `return`, whi
 
 ```
 def fibonacci_generator(limit):
-a, b = 0, 1
-while a < limit:
-yield a
-a, b = b, a + b
+  a, b = 0, 1
+  while a < limit:
+    yield a
+    a, b = b, a + b
 
-Create a generator object
+# Create a generator object
 fibs = fibonacci_generator(10)
 
-Iterate through the generator
+# Iterate through the generator
 print(next(fibs))
 
-Output: 0
+# Output: 0
 print(next(fibs))
 
-Output: 1
+# Output: 1
 print(next(fibs))
 
-Output: 1
+# Output: 1
 print(next(fibs))
 
-Output: 2
-Generators can also be used in for loops
+# Output: 2
+# Generators can also be used in for loops
 print("All fibonacci numbers up to 10:")
 for num in fibonacci_generator(10):
-print(num)
+  print(num)
 
-Output:
-All fibonacci numbers up to 10:
-0
-1
-1
-2
-3
-5
-8
+# Output:
+# All fibonacci numbers up to 10:
+# 0
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
 ```
 
 ### `pass`
@@ -159,19 +159,19 @@ The `pass` statement is a null operation. It does absolutely nothing. It is used
 
 ```
 
-A function to be implemented later
+# A function to be implemented later
 def placeholder_function():
-pass
+  pass
 
-An empty class
+# An empty class
 class EmptyClass:
-pass
+  pass
 
-A conditional block that does nothing
+# A conditional block that does nothing
 if 1 > 0:
-pass
+  pass
 else:
-print("This will not be printed")
+  print("This will not be printed")
 ```
 
 ## Control Flow
@@ -183,15 +183,15 @@ These keywords are used for conditional execution, allowing your program to make
 temperature = 25
 
 if temperature > 30:
-print("It's a hot day!")
+  print("It's a hot day!")
 elif temperature > 20:
-# This block executes because the first condition is False
-# and this one is True
-print("It's a nice day.")
+  # This block executes because the first condition is False
+  # and this one is True
+  print("It's a nice day.")
 else:
-print("It's a bit chilly.")
+  print("It's a bit chilly.")
 
-Output: It's a nice day.
+# Output: It's a nice day.
 ```
 
 It is important to note that an `if` statement is mandatory to start a conditional block. You cannot begin a conditional statement with `elif` or `else`.
@@ -200,13 +200,13 @@ This will result in a SyntaxError.
 
 ```
 
-This will result in a SyntaxError
+# This will result in a SyntaxError
 elif temperature > 20:
-print("This won't work!")
+  print("This won't work!")
 else:
-print("Neither will this.")
+  print("Neither will this.")
 
-Output: SyntaxError: invalid syntax
+# Output: SyntaxError: invalid syntax
 ```
 
 ### `for`
@@ -215,20 +215,20 @@ A `for` loop is used to iterate over a sequence of items. It executes a block of
 ```
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
-print(f"I have a {fruit}.")
+  print(f"I have a {fruit}.")
 
-Output:
-I have a apple.
-I have a banana.
-I have a cherry.
-Using a for loop with the range() function
+# Output:
+# I have a apple.
+# I have a banana.
+# I have a cherry.
+# Using a for loop with the range() function
 for i in range(3):
-print(f"Iteration number: {i}")
+  print(f"Iteration number: {i}")
 
-Output:
-Iteration number: 0
-Iteration number: 1
-Iteration number: 2
+# Output:
+# Iteration number: 0
+# Iteration number: 1
+# Iteration number: 2
 ```
 
 ### `while`
@@ -237,13 +237,13 @@ A `while` loop repeatedly executes a block of code as long as its condition rema
 ```
 count = 0
 while count < 3:
-print(f"Count is {count}")
-count += 1
+  print(f"Count is {count}")
+  count += 1
 
-Output:
-Count is 0
-Count is 1
-Count is 2
+# Output:
+# Count is 0
+# Count is 1
+# Count is 2
 ```
 
 ### `break`
@@ -251,18 +251,18 @@ The `break` statement is used to immediately exit the innermost `for` or `while`
 
 ```
 for i in range(10):
-if i == 5:
-print("Breaking the loop at 5")
-break
-print(i)
+  if i == 5:
+  print("Breaking the loop at 5")
+  break
+  print(i)
 
-Output:
-0
-1
-2
-3
-4
-Breaking the loop at 5
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4
+# Breaking the loop at 5
 ```
 
 ### `continue`
@@ -270,17 +270,17 @@ The `continue` statement skips the rest of the code inside the current iteration
 
 ```
 for i in range(5):
-if i == 2:
-print("Skipping number 2")
-continue
-print(i)
+  if i == 2:
+  print("Skipping number 2")
+  continue
+  print(i)
 
-Output:
-0
-1
-Skipping number 2
-3
-4
+# Output:
+# 0
+# 1
+# Skipping number 2
+# 3
+# 4
 ```
 
 ## Error Handling
@@ -290,20 +290,20 @@ The `try` and `except` blocks are used for handling runtime errors (exceptions).
 
 ```
 try:
-# This line will cause a ZeroDivisionError
-result = 10 / 0
+  # This line will cause a ZeroDivisionError
+  result = 10 / 0
 except ZeroDivisionError:
-# This block handles the specific error
-print("Error: Cannot divide by zero!")
+  # This block handles the specific error
+  print("Error: Cannot divide by zero!")
 except TypeError:
-# This block would handle a different type of error
-print("Error: Type mismatch!")
+  # This block would handle a different type of error
+  print("Error: Type mismatch!")
 except Exception as e:
-# This is a general catch-all for any other exception, and 'as e' gives you
-# access to the error message.
-print(f"An unexpected error occurred: {e}")
+  # This is a general catch-all for any other exception, and 'as e' gives you
+  # access to the error message.
+  print(f"An unexpected error occurred: {e}")
 
-Output: Error: Cannot divide by zero!
+# Output: Error: Cannot divide by zero!
 ```
 
 ### `finally`
@@ -313,18 +313,18 @@ The `finally` block is an optional addition to a `try...except` block. The code 
 try:
 file = open("test_file.txt", "w")
 file.write("Hello, world!")
-# The program will crash here if we try to divide by zero
-# a_list = [1, 2]
-# print(a_list[5])
+  # The program will crash here if we try to divide by zero
+  # a_list = [1, 2]
+  # print(a_list[5])
 except IOError:
-print("An IOError occurred.")
-finally:
-# This will always be executed, closing the file
-print("Closing the file.")
-file.close()
+  print("An IOError occurred.")
+  finally:
+  # This will always be executed, closing the file
+  print("Closing the file.")
+  file.close()
 
-Output:
-Closing the file.
+# Output:
+# Closing the file.
 ```
 
 ### `raise`
@@ -332,20 +332,20 @@ The `raise` statement allows you to manually force a specific exception to occur
 
 ```
 def set_age(age):
-if not isinstance(age, int):
-# Raise a TypeError if the input is not an integer
+  if not isinstance(age, int):
+  # Raise a TypeError if the input is not an integer
 raise TypeError("Age must be an integer.")
-if age < 0:
-# Raise a ValueError if the age is negative
+  if age < 0:
+  # Raise a ValueError if the age is negative
 raise ValueError("Age cannot be negative.")
-print(f"Age set to {age}.")
+  print(f"Age set to {age}.")
 
 try:
-set_age("twenty")
+  set_age("twenty")
 except (TypeError, ValueError) as e:
-print(f"An error occurred: {e}")
+  print(f"An error occurred: {e}")
 
-Output: An error occurred: Age must be an integer.
+# Output: An error occurred: Age must be an integer.
 ```
 
 ### `assert`
@@ -353,19 +353,19 @@ The `assert` statement is a debugging tool used to check if a condition is true.
 
 ```
 def average(numbers):
-# Assert that the input is a non-empty list
-assert isinstance(numbers, list) and len(numbers) > 0, "Input must be a non-empty list."
-return sum(numbers) / len(numbers)
+  # Assert that the input is a non-empty list
+  assert isinstance(numbers, list) and len(numbers) > 0, # "Input must be a non-empty list."
+  return sum(numbers) / len(numbers)
 
 print(average([10, 20, 30]))
 
-Output: 20.0
+# Output: 20.0
 try:
-print(average([]))
+  print(average([]))
 except AssertionError as e:
-print(f"Assertion Error: {e}")
+  print(f"Assertion Error: {e}")
 
-Output: Assertion Error: Input must be a non-empty list.
+# Output: Assertion Error: Input must be a non-empty list.
 ```
 
 ## Object-Oriented Programming (OOP)
@@ -387,11 +387,11 @@ def __init__(self, name, age):
 def bark(self):
     return f"{self.name} says Woof!"
 
-Create an object (an instance) of the Dog class
+# Create an object (an instance) of the Dog class
 my_dog = Dog("Fido", 5)
 print(f"My dog's name is {my_dog.name} and it is a {my_dog.species}.")
 
-Output: My dog's name is Fido and it is a Canis familiaris.
+# Output: My dog's name is Fido and it is a Canis familiaris.
 ```
 
 ### `self`
@@ -411,10 +411,10 @@ other_car = Car("Blue")
 
 print(my_car.get_color())
 
-Output: Red
+# Output: Red
 print(other_car.get_color())
 
-Output: Blue
+# Output: Blue
 ```
 
 ### `init`
@@ -423,15 +423,15 @@ The `init` method, often called the constructor, is a special method that is aut
 ```
 class Book:
 def init(self, title, author, pages):
-# These are instance attributes initialized by the constructor
-self.title = title
-self.author = author
-self.pages = pages
+  # These are instance attributes initialized by the constructor
+  self.title = title
+  self.author = author
+  self.pages = pages
 
 book1 = Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 208)
 print(f"Book: {book1.title}, Author: {book1.author}, Pages: {book1.pages}")
 
-Output: Book: The Hitchhiker's Guide to the Galaxy, Author: Douglas Adams, Pages: 208
+# Output: Book: The Hitchhiker's Guide to the Galaxy, Author: Douglas Adams, Pages: 208
 ```
 
 ### `super()`
@@ -440,18 +440,18 @@ The `super()` function allows a child class to access methods and attributes of 
 ```
 class Animal:
 def init(self, name, sound):
-self.name = name
-self.sound = sound
+  self.name = name
+  self.sound = sound
 
 def make_sound(self):
-    print(f"{self.name} says {self.sound}")
+  print(f"{self.name} says {self.sound}")
 
 class Dog(Animal):
 def init(self, name, breed):
-# Call the parent class's constructor to initialize 'name'
-# We pass 'Woof' as the sound to the parent's init method
-super().init(name, "Woof")
-self.breed = breed
+  # Call the parent class's constructor to initialize 'name'
+  # We pass 'Woof' as the sound to the parent's init method
+  super().init(name, "Woof")
+  self.breed = breed
 
 def make_sound(self):
     # This calls the method from the parent class (Animal)
@@ -461,9 +461,9 @@ def make_sound(self):
 my_dog = Dog("Fido", "Golden Retriever")
 my_dog.make_sound()
 
-Output:
-Fido says Woof
-This is a Golden Retriever.
+# Output:
+# Fido says Woof
+# This is a Golden Retriever.
 ```
 
 ### `del`
@@ -472,20 +472,20 @@ The `del` keyword is a statement used to delete an object's reference. In the co
 ```
 class Person:
 def init(self, name):
-self.name = name
+  self.name = name
 
 p1 = Person("Alice")
 p2 = p1 # p2 is now another reference to the same object
 
-Delete the attribute 'name' from the object
+# Delete the attribute 'name' from the object
 del p1.name
 
 print(p1.name) # This would raise an AttributeError
-Delete the reference 'p1'
+# Delete the reference 'p1'
 del p1
 
 print(p1) # This would raise a NameError
-However, p2 still exists and refers to the object
+# However, p2 still exists and refers to the object
 print(p2)
 ```
 
@@ -501,13 +501,13 @@ import math
 
 print(math.sqrt(16))
 
-Output: 4.0
-Imports the entire 'random' module
+# Output: 4.0
+# Imports the entire 'random' module
 import random
 
 print(random.randint(1, 10))
 
-Output: (a random integer between 1 and 10)
+# Output: (a random integer between 1 and 10)
 ```
 
 ### `from ... import ...`
@@ -515,18 +515,18 @@ This statement is used to import specific items (functions, classes, or variable
 
 ```
 
-Imports only the 'pi' variable from the 'math' module
+# Imports only the 'pi' variable from the 'math' module
 from math import pi
 
 print(pi)
 
-Output: 3.141592653589793
-Imports the 'randint' function from the 'random' module
+# Output: 3.141592653589793
+# Imports the 'randint' function from the 'random' module
 from random import randint
 
 print(randint(1, 10))
 
-Output: (a random integer between 1 and 10)
+# Output: (a random integer between 1 and 10)
 ```
 
 ### `as`
@@ -534,13 +534,13 @@ The `as` keyword is used to create an alias or a shorter name for an imported mo
 
 ```
 
-Create an alias 'pd' for the 'pandas' module
+# Create an alias 'pd' for the 'pandas' module
 import pandas as pd
 
-Create an alias 'get_random_int' for the 'randint' function
+# Create an alias 'get_random_int' for the 'randint' function
 from random import randint as get_random_int
 
-Now you can use the aliases
+# Now you can use the aliases
 data = pd.DataFrame({'col1': [1, 2]})
 print(data)
 print(get_random_int(1, 5))
@@ -555,17 +555,17 @@ Variables defined outside of a function are considered to be in the global scope
 x = 10  # This is a global variable
 
 def modify_global():
-# 'x' inside this function refers to the global variable
-global x
-x += 5
-print(f"Inside function, x is: {x}")
+  # 'x' inside this function refers to the global variable
+  global x
+  x += 5
+  print(f"Inside function, x is: {x}")
 
 modify_global()
 
-Output: Inside function, x is: 15
+# Output: Inside function, x is: 15
 print(f"Outside function, x is: {x}")
 
-Output: Outside function, x is: 15
+# Output: Outside function, x is: 15
 ```
 
 ### `nonlocal`
@@ -573,7 +573,7 @@ The `nonlocal` keyword is similar to `global` but is used in nested functions. I
 
 ```
 def outer_function():
-count = 0  # This is a variable in the outer function's scope
+  count = 0  # This is a variable in the outer function's scope
 
 def inner_function():
     # 'nonlocal' refers to 'count' in the outer_function's scope
@@ -590,7 +590,7 @@ return count
 final_count = outer_function()
 print(f"Final count is: {final_count}")
 
-Output: Final count is: 2
+# Output: Final count is: 2
 ```
 
 ### `is`
@@ -603,13 +603,13 @@ c = [1, 2, 3]  # c is a new list object with the same values
 
 print(f"a is b: {a is b}")
 
-Output: a is b: True
+# Output: a is b: True
 print(f"a == c: {a == c}")
 
-Output: a == c: True (Their values are equal)
+# Output: a == c: True (Their values are equal)
 print(f"a is c: {a is c}")
 
-Output: a is c: False (They are different objects)
+# Output: a is c: False (They are different objects)
 ```
 
 ### `in`
@@ -619,14 +619,14 @@ The `in` operator checks for membership. It returns True if an item is found wit
 fruits = ["apple", "banana", "cherry"]
 print(f"'banana' in fruits: {'banana' in fruits}")
 
-Output: 'banana' in fruits: True
+# Output: 'banana' in fruits: True
 print(f"'grape' in fruits: {'grape' in fruits}")
 
-Output: 'grape' in fruits: False
+# Output: 'grape' in fruits: False
 text = "Hello, World!"
 print(f"'World' in text: {'World' in text}")
 
-Output: 'World' in text: True
+# Output: 'World' in text: True
 ```
 
 ## Context & Special Uses
@@ -636,12 +636,12 @@ The `with` statement is a powerful construct for simplifying resource management
 
 ```
 
-The with statement automatically handles opening and closing the file
+# The with statement automatically handles opening and closing the file
 with open("notes.txt", "w") as file:
 file.write("This is a line of text.\n")
 file.write("This is another line.\n")
 
-The file is automatically closed here, even if a crash occurred inside the block.
+# The file is automatically closed here, even if a crash occurred inside the block.
 ```
 
 ### `None`
@@ -652,7 +652,7 @@ my_variable = None
 if my_variable is None:
 print("The variable has no value assigned.")
 
-Output: The variable has no value assigned.
+# Output: The variable has no value assigned.
 ```
 
 ### `True`/`False`
@@ -663,9 +663,9 @@ is_sunny = True
 is_cold = False
 
 if is_sunny and not is_cold:
-print("It's a perfect day!")
+  print("It's a perfect day!")
 
-Output: It's a perfect day!
+# Output: It's a perfect day!
 ```
 
 ### `and`/`or`/`not`
@@ -684,17 +684,17 @@ is_senior = False
 
 and example
 if age >= 16 and has_license:
-print("You are eligible to drive.")
+  print("You are eligible to drive.")
 
-Output: You are eligible to drive.
+# Output: You are eligible to drive.
 or example
 if is_senior or age >= 65:
-print("You qualify for a senior discount.")
+  print("You qualify for a senior discount.")
 
-Output: (nothing is printed)
+# Output: (nothing is printed)
 not example
 if not is_senior:
-print("You are not a senior.")
+  print("You are not a senior.")
 
-Output: You are not a senior.
+# Output: You are not a senior.
 ```
